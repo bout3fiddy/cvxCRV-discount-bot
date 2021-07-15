@@ -1,0 +1,1 @@
+worker: python src/discord_sidebar_bot.py

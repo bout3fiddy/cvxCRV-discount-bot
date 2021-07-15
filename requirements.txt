@@ -1,0 +1,5 @@
+black
+discord
+discord.py
+web3
+py-etherscan-api
