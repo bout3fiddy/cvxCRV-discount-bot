@@ -1,6 +1,8 @@
+import asyncio
+import os
+
 import discord
 from discord.ext import commands
-import asyncio, os
 
 from scrape_sushi import get_cvxCRV_discount_rate, init_contract
 
