@@ -4,7 +4,7 @@ import os
 import discord
 from discord.ext import commands
 
-from scrape_sushi import get_cvxCRV_discount_rate, init_contract
+from scrape_curve_pool import get_cvxCRV_discount_rate, init_contract
 
 bot = commands.Bot(command_prefix=".")
 token = os.getenv("BOT_TOKEN")
