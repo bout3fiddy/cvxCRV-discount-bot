@@ -2,11 +2,15 @@ import os
 
 import web3
 from etherscan.contracts import Contract as EtherscanContract
+from dotenv import dotenv_values
 
+config = dotenv_values(".env")
+web3_token = config["WEB3_INFURA_PROJECT_ID"]
+etherscan_api_key = config["ETHERSCAN_API_KEY"]
 
 w3_infura = web3.Web3(
     web3.Web3.HTTPProvider(
-        f"https://mainnet.infura.io/v3/{os.environ['WEB3_INFURA_PROJECT_ID']}",
+        f"https://mainnet.infura.io/v3/{web3_token}",
     ),
 )
 
