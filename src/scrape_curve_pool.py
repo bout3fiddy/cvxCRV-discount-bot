@@ -22,7 +22,7 @@ def init_contract(address: str):
     return contract
 
 
-def get_cvxCRV_discount_rate(pool_contract, crv_in: int = 1e22):
+def get_cvxCRV_discount_rate(pool_contract, crv_in=1e22):
 
     cvxcrv_out = pool_contract.functions.get_dy(
         0, 1, int(crv_in)
