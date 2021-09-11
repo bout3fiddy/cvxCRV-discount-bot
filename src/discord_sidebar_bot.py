@@ -1,14 +1,18 @@
 import asyncio
-import os
 
 import discord
 from discord.ext import commands
 
 from scrape_curve_pool import get_cvxCRV_discount_rate, init_contract
 
+from dotenv import dotenv_values
+
+config = dotenv_values(".env")
+print(config)
+
 bot = commands.Bot(command_prefix=".")
-token = os.getenv("BOT_TOKEN")
-guild_id = int(os.getenv("GUILD_ID"))
+token = config["BOT_TOKEN"]
+guild_id = int(config["GUILD_ID"])
 crv_in = 10000
 
 curve_cvxcrv_factory_pool = init_contract(
